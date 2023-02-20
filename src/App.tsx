@@ -2,19 +2,24 @@ import './App.css';
 import Upload from './components/Upload';
 import { Route, Routes } from 'react-router-dom';
 import ViewPhotos from './components/ViewPhotos';
-import Countdown from './components/Countdown';
+
+import Notifications from './components/Notifications';
+
+import Time from './components/Time';
 
 function App() {
   return (
     <div className='App'>
-      <Countdown />
+      <Time />
+
+      <Notifications />
       <h1>Jenn et Micka</h1>
-      <div>coucou</div>
+
       <ViewPhotos />
       <Upload />
-      <Routes>
+      {/* <Routes>
         <Route></Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

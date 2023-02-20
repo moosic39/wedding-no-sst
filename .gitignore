@@ -26,3 +26,6 @@ dist-ssr
 # replit
 replit.nix
 .replit
+
+# env
+.env
