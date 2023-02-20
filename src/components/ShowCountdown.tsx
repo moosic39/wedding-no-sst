@@ -38,12 +38,12 @@ function ShowCountdown(props: { countdown: number }): ReactJSXElement {
   const { ...time } = timeLeft(props.countdown);
   return (
     <>
-      <span>{time.years} </span>
-      <span>{time.months} </span>
-      <span>{time.days} </span>
-      <span>{time.hours} </span>
-      <span>{time.minutes} </span>
-      <span>{time.seconds} </span>
+      <span>{time.years}ans </span>
+      <span>{time.months}mois </span>
+      <span>{time.days}jours </span>
+      <span>{time.hours}heures </span>
+      <span>{time.minutes}minutes </span>
+      <span>{time.seconds}secondes</span>
     </>
   );
 }
