@@ -10,7 +10,7 @@ export type TimeLeft = (displayTime: number) => {
   seconds: number;
 };
 
-function ShowCountdown(props: { countdown: number }): ReactJSXElement {
+function ShowCountdown({ countdown }: { countdown: number }): ReactJSXElement {
   const timeLeft: TimeLeft = (displayTime) => {
     const years = Math.floor(displayTime / (365 * 24 * 60 * 60 * 1000));
     const months = Math.floor(
@@ -35,7 +35,7 @@ function ShowCountdown(props: { countdown: number }): ReactJSXElement {
     };
   };
 
-  const { ...time } = timeLeft(props.countdown);
+  const { ...time } = timeLeft(countdown);
   return (
     <>
       <span>{time.years}ans </span>

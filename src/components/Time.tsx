@@ -4,22 +4,21 @@ import Countdown from './Countdown';
 function Time() {
   const [launchTime, setLaunchTime] = useState<number>(1720216800000);
   const clickHandler = (event: any) => {
-    console.log(event.target.valueAsNumber);
-    setLaunchTime(event.target.valueAsNumber);
+    console.log(event.target.value, 'cool');
+    setLaunchTime(event.target.value);
   };
 
   return (
     <div>
       <div>
         <span>type date here</span>
-        <input type='date' />
-        <button
-          onClick={(event) => {
-            clickHandler(event);
+        <input
+          type='date'
+          onChange={(e) => {
+            setLaunchTime(e.target.valueAsNumber);
           }}
-        >
-          Start Countdown
-        </button>
+        />
+        <button>Start Countdown</button>
       </div>
       <Countdown launchtime={launchTime} />
     </div>

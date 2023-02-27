@@ -17,9 +17,6 @@ function App() {
 
       <ViewPhotos />
       <Upload />
-      {/* <Routes>
-        <Route></Route>
-      </Routes> */}
     </div>
   );
 }

@@ -15,9 +15,6 @@ function Countdown(props: { launchtime: number }): ReactJSXElement {
       clearInterval(id);
     };
   }, [countdown]);
-  if (typeof countdown !== 'number') {
-    throw console.error('Not a number');
-  }
 
   return (
     <div>
@@ -25,8 +22,10 @@ function Countdown(props: { launchtime: number }): ReactJSXElement {
       <br />
       {countdown}
       <br />
-
-      <ShowCountdown countdown={countdown} />
+      <ShowCountdown
+        countdown={typeof countdown !== 'undefined' ? countdown : 0}
+      />
+      :
     </div>
   );
 }
